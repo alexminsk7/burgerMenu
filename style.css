@@ -1,0 +1,88 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: consolas, sans-serif;
+	background: #000 url(photo1.jpeg) top center no-repeat / cover;
+}
+.menu-link {
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 9;
+}
+.menu-link span, span:before, span:after {
+	display: block;
+	width: 22px;
+	height: 2px;
+	background-color: #333;
+	position: absolute;
+	left: 50%;
+	margin-left: -11px;
+	top: 50%;
+	margin-top: -1px;
+}
+.menu-link span:before {
+	content: '';
+	margin-top: -8px;
+	transition: all .3s;
+}
+.menu-link span:after {
+	content: '';
+	margin-top: 6px;
+	transition: all .3s;
+}
+.menu-link_active span {
+	background-color: transparent;
+}
+.menu-link_active span:before {
+	transform: rotate(135deg);
+	margin-top: 0;
+}
+.menu-link_active span:after {
+	transform: rotate(-135deg);
+	margin-top: 0;
+}
+.menu {
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	background-color: purple;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	left: -100vw;
+	transition: all .5s;
+}
+.menu_active {
+	left: 0;
+}
+.menu ul {
+	list-style: none;
+	text-align: center;
+}
+.menu ul a {
+	color: #fff;
+	line-height: 3;
+	font-weight: 100;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	transition: all .3s;
+	text-decoration: none;
+}
+.menu ul a:hover {
+	color: purple;
+	display: block;
+	width: 100%;
+	background-color: rgba(255, 255, 255, .7);
+}

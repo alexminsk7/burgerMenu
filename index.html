@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>burger</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<a href="#menu" class="menu-link">
+		<span></span>
+	</a>
+
+	<div class="menu">
+		<ul>
+			<li><a href="#">home</a></li>
+			<li><a href="#">about</a></li>
+			<li><a href="#">portfolio</a></li>
+			<li><a href="#">contact</a></li>
+			<li><a href="#">blog</a></li>
+		</ul>
+	</div>
+	
+	<script src="jquery-1.12.4.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			let link = $('.menu-link');
+			let link_active = $('.menu-link_active');
+			let menu = $('.menu');
+
+			link.click(function() {
+				link.toggleClass('menu-link_active');
+				menu.toggleClass('menu_active');
+			});
+			link_active.click(function() {
+				link.removeClass('menu-link_active');
+			});
+		});
+
+	</script>
+</body>
+</html>
